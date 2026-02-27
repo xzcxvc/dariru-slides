@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Bitcount */
+@font-face {
+  font-family: Bitcount;
+  src: url("./assets/fonts/BitcountGridDouble_Cursive-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Press Start 2P */
+@font-face {
+  font-family: PressStart;
+  src: url("./assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ShareTechMono*/
+@font-face {
+  font-family: ShareTech;
+  src: url("./assets/fonts/ShareTechMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .font-bitcount {
+    font-family: "Bitcount", sans-serif;
+  }
+  .font-pressstart {
+    font-family: "PressStart", monospace;
+  }
+  .font-sharetech {
+    font-family: "ShareTech", monospace;
+  }
+}
