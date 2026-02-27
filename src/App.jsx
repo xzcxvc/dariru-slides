@@ -8,23 +8,26 @@ import NiceToHaves from "./pages/nice-to-haves";
 import Realizations from "./pages/realizations";
 import GridBackground from "./components/grid-background";
 import Sidebar from "./components/sidebar";
+import ClickSpark from "./components/click-spark";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="relative pl-[110px] min-h-screen bg-[#FFF8E7] transition-all snap-y snap-mandatory ">
-      <GridBackground />
-      <Sidebar />
-      <main>
-        <section className="snap-start">
-          <Welcome />
-          <Learnings />
-          <NiceToHaves />
-          <Realizations />
-        </section>
-      </main>
-    </div>
+    <>
+      <div className="relative pl-[110px] min-h-screen bg-[#FFF8E7] transition-all snap-y snap-mandatory ">
+        <GridBackground />
+        <Sidebar />
+        <main>
+          <section className="snap-start">
+            <Welcome />
+            <Learnings />
+            <NiceToHaves />
+            <Realizations />
+          </section>
+        </main>
+      </div>
+    </>
   );
 }
 
