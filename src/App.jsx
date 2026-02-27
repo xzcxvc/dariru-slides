@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Welcome from "./pages/welcome";
 import Learnings from "./pages/learnings";
@@ -11,7 +8,7 @@ import Sidebar from "./components/sidebar";
 import ClickSpark from "./components/click-spark";
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>

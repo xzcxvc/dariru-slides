@@ -16,7 +16,7 @@ const Sidebar = () => {
       <div className="min-h-[calc(100vh-35px)] w-20 flex flex-col justify-evenly ">
         <div className="flex flex-col items-center justify-between min-h-[100vh] gap-12 p-8 text-[#212435]">
           <div>
-            <ul className="relative flex flex-col justify-center items-center gap-5">
+            <ul className="relative flex flex-col justify-center items-center gap-5 min-h-[100vh]">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 return (
