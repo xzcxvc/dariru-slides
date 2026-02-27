@@ -1,4 +1,8 @@
 import { Hand, BrainCircuit, Sparkles, Lightbulb } from "lucide-react";
+import AiEra from "/aiera.png"
+import AtomicDesign from "/atomicdesign.png"
+import Documentation from "/documentation.png"
+import TechStach from "/techstack.png"
 
 export const navItems = [
   {
@@ -31,21 +35,21 @@ export const learnings = [
   {
     id: 1,
     name: "New Tech Stack",
-    // icon: Hand,
+    thumbnail: TechStach,
   },
   {
     id: 2,
     name: "Atomic Design",
-    // icon: BrainCircuit,
+    thumbnail: AtomicDesign,
   },
   {
     id: 3,
     name: "Custom Component Documentation",
-    // icon: Sparkles,
+    thumbnail: Documentation,
   },
   {
     id: 4,
     name: "Embracing the AI Era",
-    // icon: Lightbulb,
+    thumbnail: AiEra,
   },
 ];

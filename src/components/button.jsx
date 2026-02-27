@@ -4,7 +4,7 @@ const Button = ({ onClick, className, children }) => {
   return (
     <button
       onClick={() => onClick()}
-      className={`${className} flex items-center justify-center  
+      className={`${className} flex items-center justify-center z-50
         hover:border-1 
         hover:border-black 
         hover:text-white 

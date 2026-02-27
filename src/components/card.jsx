@@ -1,8 +1,10 @@
-import React from "react";
-
-const Card = ({ children, className }) => {
+const Card = ({ className, children }) => {
   return (
-    <div className={`${className} border-1 h-[500px] !w-[720px]`}>{children}</div>
+    <div
+      className={`${className} relative border-2 border-black z-10 block transition-all duration-200`}
+    >
+      {children}
+    </div>
   );
 };
 
