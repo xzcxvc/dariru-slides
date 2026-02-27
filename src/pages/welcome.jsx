@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import SectionText from "../components/section-text";
 import BoxShadow from "../components/shadow";
 import { motion, useInView } from "framer-motion";
-import welcomeImg from "../../public/welcomeImg.png";
+import welcomeImg from "/welcomeImg.png";
 
 const Welcome = () => {
   const ref = useRef(null);
@@ -10,10 +10,7 @@ const Welcome = () => {
   return (
     <section id="welcome" className="relative min-h-screen ">
       <h2 className="text-4xl md:text-6xl font-bold text-gray-900 ">
-        <SectionText
-          text="WELCOME!"
-          className="bg-[#FA7958] relative z-10 font-bold shadow-[10px_10px_0px_rgba(0,0,0,0.8)]"
-        />
+        <SectionText text="WELCOME!" />
 
         <motion.div
           ref={ref}
