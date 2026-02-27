@@ -2,8 +2,13 @@ import React from "react";
 import SectionText from "../components/section-text";
 import Card from "../components/card";
 import { learnings } from "../constants";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Learnings = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section
       id="learnings"
@@ -12,7 +17,7 @@ const Learnings = () => {
       <h2 className="text-4xl md:text-6xl font-bold text-gray-900 ">
         <SectionText text="LEARNINGS" />
         <div className="flex font-bitcount justify-evenly relative py-72 px-24 flex items-center gap-8">
-          {learnings?.map((learning) => {
+          {learnings?.map((learning, index) => {
             let dynamicColor;
 
             switch (learning?.id) {
@@ -31,17 +36,30 @@ const Learnings = () => {
             }
             return (
               <div key={learning.id} className="relative inline-block group ">
-                <div
-                  className={`absolute inset-0 bg-black z-0 transition-all duration-200 translate-2 group-hover:translate-3`}
-                />
-                <Card
-                  className={`${dynamicColor} group-hover:-translate-3   gap-3`}
+                <motion.div
+                  ref={ref}
+                  initial={{ opacity: 0, y: index % 2 === 0 ? 200 : -200 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 0.6,
+                    delay: index % 2 === 0 ? 0.1 : 0.2,
+                    ease: "easeOut",
+                  }}
+                  className="font-sharetech relative text-wrap "
                 >
-                  <img src={learning?.thumbnail} alt={learning?.name} />
-                  <p className=" w-full absolute text-3xl text-center text-wrap mt-12">
-                    {learning?.name}
-                  </p>
-                </Card>
+                  <div
+                    className={`absolute inset-0 bg-black z-0 transition-all duration-200 translate-2 group-hover:translate-3`}
+                  />
+
+                  <Card
+                    className={`${dynamicColor} group-hover:-translate-3   gap-3`}
+                  >
+                    <img src={learning?.thumbnail} alt={learning?.name} />
+                    <p className=" w-full absolute text-3xl text-center text-wrap mt-12">
+                      {learning?.name}
+                    </p>
+                  </Card>
+                </motion.div>
               </div>
             );
           })}

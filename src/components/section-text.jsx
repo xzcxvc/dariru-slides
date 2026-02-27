@@ -16,7 +16,7 @@ const SectionText = ({ text, className }) => {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div
-        className={`font-bold font-pressstart text-gray-900 top-28 left-12 inline p-4 relative text-nowrap ${className} bg-[#FA7958] relative z-10 font-bold shadow-[10px_10px_0px_rgba(0,0,0,0.8)]`}
+        className={`font-bold font-pressstart border-[5px] border-black text-gray-900 top-28 left-12 inline p-4 relative text-nowrap ${className} bg-[#FA7958] relative z-10 font-bold shadow-[10px_10px_0px_rgba(0,0,0,0.8)]`}
       >
         {text}
       </div>

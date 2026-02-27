@@ -3,6 +3,8 @@ import SectionText from "../components/section-text";
 import BoxShadow from "../components/shadow";
 import { motion, useInView } from "framer-motion";
 import WelcomeImg from "/welcomeImg.png";
+import ClickSpark from "../components/click-spark";
+
 const Welcome = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -35,7 +37,7 @@ const Welcome = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           >
-            <div className="w-full h-[680px] border shadow-[15px_15px_0px_rgba(0,0,0,0.8)]">
+            <div className="w-full h-[680px] border-[5px] border-black shadow-[15px_15px_0px_rgba(0,0,0,0.8)]">
               <img
                 src={WelcomeImg}
                 alt="Welcome Image"
