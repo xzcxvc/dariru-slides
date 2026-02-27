@@ -20,8 +20,8 @@ const Welcome = () => {
         >
           <div className="flex justify-evenly relative p-20 flex  items-center  gap-3">
             <p className="font-sharetech relative text-wrap w-7/12">
-              Discover our learnings, reflect on our failures, and celebrate the
-              realizations that guide the way forward.
+              "Explore our insights, learn from our missteps, and celebrate the
+              discoveries that light the path ahead."
             </p>
             <div className="w-5/12 h-[680px] border shadow-[10px_10px_0px_rgba(0,0,0,0.8)]">
               <img

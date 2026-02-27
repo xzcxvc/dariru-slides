@@ -26,3 +26,26 @@ export const navItems = [
     icon: Lightbulb,
   },
 ];
+
+export const learnings = [
+  {
+    id: 1,
+    name: "New Tech Stack",
+    // icon: Hand,
+  },
+  {
+    id: 2,
+    name: "Atomic Design",
+    // icon: BrainCircuit,
+  },
+  {
+    id: 3,
+    name: "Custom Component Documentation",
+    // icon: Sparkles,
+  },
+  {
+    id: 4,
+    name: "Embracing the AI Era",
+    // icon: Lightbulb,
+  },
+];
