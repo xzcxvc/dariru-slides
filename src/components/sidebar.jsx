@@ -13,7 +13,7 @@ const handleNavClick = (href) => {
 
 const Sidebar = () => {
   return (
-    <aside className="flex fixed bg-[#FFF8E7] h-[100vh] transition-all top-0 left-0 border-r-5 z-50 border-[#404A65]  w-[110px] items-center justify-center">
+    <aside className="flex fixed bg-[#FFF8E7] h-[100vh] transition-all top-0 left-0 border-r-5 z-50 border-[#404A65] items-center justify-center">
       <ClickSpark sparkColor="#000" sparkRadius={42} sparkCount={8}>
         <div className="min-h-[calc(100vh-35px)] w-20 flex flex-col justify-evenly ">
           <div className="flex flex-col items-center justify-between min-h-[100vh] gap-12 p-8 text-[#212435]">

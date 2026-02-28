@@ -19,7 +19,7 @@ const Welcome = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
         > */}
-      <div className="flex justify-evenly relative p-20 flex  items-center  gap-3">
+      <div className="flex justify-evenly relative p-20 flex  items-center  gap-12">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, x: 200 }}
@@ -37,11 +37,11 @@ const Welcome = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
         >
-          <div className="w-full h-[680px] border-[5px] border-black shadow-[15px_15px_0px_rgba(0,0,0,0.8)]">
+          <div className="h-[600px] w-[600px] border-[5px] border-black shadow-[15px_15px_0px_rgba(0,0,0,0.8)]">
             <img
               src={WelcomeImg}
               alt="Welcome Image"
-              className="w-full h-full object-cover"
+              className="w-[600px] h-[600px] object-cover"
             />
           </div>
         </motion.div>

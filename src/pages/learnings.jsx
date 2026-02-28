@@ -11,8 +11,7 @@ const Learnings = () => {
   const [toggledLearning, setToggledLearning] = useState(null);
 
   const handleToggle = (id) => {
-    const selected = learnings.find((item) => item.id === id);
-    setToggledLearning(selected);
+    setToggledLearning((prev) => (prev === id ? null : id)); // Toggle the selected learning
   };
 
   return (
@@ -27,62 +26,83 @@ const Learnings = () => {
       <div
         className={`flex font-bitcount justify-evenly relative py-72 px-24 flex items-center gap-8`}
       >
-        {learnings?.map((learning, index) => {
-          let dynamicColor;
+        {learnings
+          ?.filter((item) =>
+            toggledLearning ? item.id === toggledLearning : true,
+          )
+          .map((learning, index) => {
+            let dynamicColor;
 
-          switch (learning?.id) {
-            case 1:
-              dynamicColor = "#FF6F61";
-              break;
-            case 2:
-              dynamicColor = "#B8E986";
-              break;
-            case 3:
-              dynamicColor = "#F7A8B8";
-              break;
-            case 4:
-              dynamicColor = "#B39DDB";
-              break;
-          }
+            switch (learning?.id) {
+              case 1:
+                dynamicColor = "#FF6F61";
+                break;
+              case 2:
+                dynamicColor = "#B8E986";
+                break;
+              case 3:
+                dynamicColor = "#F7A8B8";
+                break;
+              case 4:
+                dynamicColor = "#B39DDB";
+                break;
+            }
 
-          const isActive = toggledLearning?.id === learning.id;
-          return (
-            <div key={learning.id} className="relative inline-block group ">
-              <motion.div
-                ref={ref}
-                initial={{ opacity: 0, y: index % 2 === 0 ? 200 : -200 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.6,
-                  delay: index % 2 === 0 ? 0.5 : 0.4,
-                  ease: "easeOut",
-                }}
-                className=" relative text-wrap"
-              >
-                <div
-                  className={`absolute inset-0 bg-black z-0 transition-all duration-200 translate-2 group-hover:translate-3 
-                    ${isActive ? "translate-3 w-full" : ""}`}
-                />
-                <Card
-                  className={`group-hover:-translate-3 gap-3 hover:cursor-pointer 
-                    ${isActive ? "-translate-3" : ""}`}
-                  style={{ background: dynamicColor }}
-                  onClick={() => handleToggle(learning.id)}
+            return (
+              <div key={learning.id} className="relative inline-block group ">
+                <motion.div
+                  ref={ref}
+                  initial={{ opacity: 0, y: index % 2 === 0 ? 200 : -200 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 0.6,
+                    delay: index % 2 === 0 ? 0.5 : 0.4,
+                    ease: "easeOut",
+                  }}
+                  className=" relative text-wrap"
                 >
-                  <img src={learning?.thumbnail} alt={learning?.name} />
-                  <p
-                    className={`w-auto absolute text-3xl text-center text-wrap mt-12 
+                  <motion.div>
+                    <Card
+                      isActive={toggledLearning}
+                      className={`group-hover:-translate-3 gap-3 hover:cursor-pointer transition-all duration-300 ${toggledLearning === learning?.id ? "w-350" : ""} w-80 h-80 
+                    ${toggledLearning ? "-translate-3" : ""}`}
+                      style={{ background: dynamicColor }}
+                      onClick={() => handleToggle(learning.id)}
+                    >
+                      <div className="flex relative gap-12">
+                        <img
+                          src={learning?.thumbnail}
+                          alt={learning?.name}
+                          className={`w-80`}
+                        />
+                        {toggledLearning && (
+                          <div className="w-full">
+                            <ul
+                              className={`flex gap-3 py-12 flex-col justify-center text-2xl font-bold font-pressstart`}
+                            >
+                              {learning?.items?.map((item) => (
+                                <li key={item.id}>
+                                  <p>{item.item}</p>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                      <p
+                        className={`w-auto absolute text-3xl text-center text-wrap mt-12 
                       font-extrabold group-hover:text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)] 
-                      ${isActive ? "text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)]" : ""}`}
-                    style={{ color: dynamicColor }}
-                  >
-                    {learning?.name}
-                  </p>
-                </Card>
-              </motion.div>
-            </div>
-          );
-        })}
+                      ${toggledLearning ? "text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)]" : ""}`}
+                        style={{ color: dynamicColor }}
+                      >
+                        {learning?.name}
+                      </p>
+                    </Card>
+                  </motion.div>
+                </motion.div>
+              </div>
+            );
+          })}
       </div>
     </section>
   );
