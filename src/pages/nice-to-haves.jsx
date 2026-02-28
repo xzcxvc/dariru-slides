@@ -79,13 +79,23 @@ const NiceToHaves = () => {
                         </div>
                       </p>
                       {toggledNiceToHave === niceToHave.id && (
-                        <ul className="relative px-24 py-32 transition-all duration-300">
-                          <li>
+                        <motion.div
+                          initial={{
+                            opacity: 0,
+                          }}
+                          animate={isInView ? { opacity: 1, x: 0 } : {}}
+                          transition={{
+                            duration: 0.7,
+                            delay: 0.2,
+                            ease: "easeOut",
+                          }}
+                        >
+                          <div className="relative px-24 py-32 transition-all duration-300">
                             <p className="font-sharetech text-3xl font-bold">
                               {niceToHave?.description}
                             </p>
-                          </li>
-                        </ul>
+                          </div>
+                        </motion.div>
                       )}
                     </div>
                   </Card>
