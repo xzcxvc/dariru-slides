@@ -64,7 +64,7 @@ const Learnings = () => {
                   <motion.div>
                     <Card
                       isActive={toggledLearning}
-                      className={`group-hover:-translate-3 gap-3 hover:cursor-pointer transition-all duration-300 ${toggledLearning === learning?.id ? "w-350" : ""} w-80 h-80 
+                      className={`${toggledLearning === learning?.id ? "w-350" : ""} w-80 h-80 
                     ${toggledLearning ? "-translate-3" : ""}`}
                       style={{ background: dynamicColor }}
                       onClick={() => handleToggle(learning.id)}

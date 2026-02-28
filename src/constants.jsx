@@ -39,6 +39,16 @@ export const navItems = [
   },
 ];
 
+export const welcomeWords = [
+  { id: 1, word: "Explore our ", type: "normal" },
+  { id: 2, word: "insights", type: "animated" },
+  { id: 3, word: ", learn from our ", type: "normal" },
+  { id: 4, word: "missteps", type: "animated" },
+  { id: 5, word: ", and celebrate the ", type: "normal" },
+  { id: 6, word: "discoveries", type: "animated" },
+  { id: 7, word: " that light the path ahead.", type: "normal" },
+];
+
 export const niceToHaves = [
   {
     id: 1,

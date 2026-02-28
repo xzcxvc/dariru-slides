@@ -60,9 +60,7 @@ const NiceToHaves = () => {
                 <motion.div>
                   <Card
                     isActive={toggledNiceToHave === niceToHave?.id}
-                    className={`group-hover:-translate-3 gap-3 hover:cursor-pointer transition-all duration-300
-                       ${toggledNiceToHave === niceToHave?.id ? "h-70" : ""} w-350 h-36 
-                   `}
+                    className={` ${toggledNiceToHave === niceToHave?.id ? "h-70" : ""} w-350 h-36 `}
                     style={{ background: dynamicColor }}
                     onClick={() => handleToggle(niceToHave.id)}
                   >

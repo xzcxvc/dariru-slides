@@ -6,7 +6,7 @@ const Card = ({ className, children, isActive, ...props }) => {
                     ${isActive ? "translate-3 w-full" : "translate-2"}`}
       />
       <div
-        className={`${className} relative border-[5px] border-black z-10 block transition-all duration-200`}
+        className={`${className}  hover:cursor-pointer hover:-translate-3 relative border-[5px] border-black z-10 block transition-all duration-200`}
         {...props}
       >
         {children}
