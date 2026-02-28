@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div className="relative pl-[110px] min-h-screen bg-[#FFF8E7] transition-all snap-y snap-mandatory ">
-        <ClickSpark sparkColor="#000" sparkRadius={42} sparkCount={8}>
+        <ClickSpark sparkColor="#000" sparkRadius={42} sparkCount={8} sparkSize={14}>
           <GridBackground />
           <Sidebar />
           <main>
