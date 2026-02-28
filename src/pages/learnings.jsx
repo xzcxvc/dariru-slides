@@ -78,7 +78,7 @@ const Learnings = () => {
                         {toggledLearning && (
                           <div className="w-full">
                             <ul
-                              className={`flex gap-3 py-12 flex-col justify-center text-2xl font-bold font-pressstart`}
+                              className={`flex gap-4 flex-col min-h-full justify-center text-2xl font-bold font-pressstart`}
                             >
                               {learning?.items?.map((item) => (
                                 <li key={item.id}>

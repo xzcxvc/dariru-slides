@@ -1,4 +1,12 @@
-import { Hand, BrainCircuit, Sparkles, Lightbulb } from "lucide-react";
+import {
+  Hand,
+  BrainCircuit,
+  Sparkles,
+  Lightbulb,
+  Atom,
+  Bookmark,
+  Book,
+} from "lucide-react";
 import AiEra from "/aiera.png";
 import AtomicDesign from "/atomicdesign.png";
 import Documentation from "/documentation.png";
@@ -35,10 +43,16 @@ export const niceToHaves = [
   {
     id: 1,
     name: "Implementation of Atomic Design",
+    description:
+      "<Adopting Atomic Design principles for better component organization and scalability./>",
+    icon: Atom,
   },
   {
     id: 2,
     name: "Custom Component Documentation",
+    description:
+      "<Creating comprehensive documentation for custom components to enhance team collaboration and onboarding./>",
+    icon: Book,
   },
 ];
 

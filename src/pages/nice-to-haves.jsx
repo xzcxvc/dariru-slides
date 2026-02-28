@@ -24,7 +24,7 @@ const NiceToHaves = () => {
       </h2>
 
       <div
-        className={`flex flex-col font-bitcount justify-evenly relative py-72 flex items-start px-24 gap-8`}
+        className={`flex flex-col font-bitcount justify-evenly relative py-72 flex items-start px-27 gap-8`}
       >
         {niceToHaves.map((niceToHave, index) => {
           let dynamicColor;
@@ -43,7 +43,7 @@ const NiceToHaves = () => {
               dynamicColor = "#B39DDB";
               break;
           }
-
+          const Icon = niceToHave?.icon;
           return (
             <div key={niceToHave.id} className="relative inline-block group ">
               <motion.div
@@ -68,17 +68,22 @@ const NiceToHaves = () => {
                   >
                     <div className="flex flex-col gap-3">
                       <p
-                        className={`w-auto absolute text-4xl text-center text-wrap p-12 
+                        className={`w-full absolute text-4xl text-center text-wrap p-12 
                       font-extrabold group-hover:text-shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)]
                     `}
                         // style={{ color: dynamicColor }}
                       >
-                        {niceToHave?.name}
+                        <div className="flex items-center justify-between ">
+                          {niceToHave?.name}
+                          <Icon className="w-10 h-10" />
+                        </div>
                       </p>
                       {toggledNiceToHave === niceToHave.id && (
-                        <ul className="relative p-28 transition-all duration-300">
+                        <ul className="relative px-24 py-32 transition-all duration-300">
                           <li>
-                            <p>1231</p>
+                            <p className="font-sharetech text-3xl font-bold">
+                              {niceToHave?.description}
+                            </p>
                           </li>
                         </ul>
                       )}
