@@ -7,6 +7,8 @@ const NiceToHaves = () => {
       <h2 className="text-4xl md:text-6xl font-bold text-gray-900 ">
         <SectionText text="NICE TO HAVE" />
       </h2>
+
+      
     </section>
   );
 };

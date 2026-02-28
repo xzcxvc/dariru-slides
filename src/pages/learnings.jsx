@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionText from "../components/section-text";
 import Card from "../components/card";
 import { learnings } from "../constants";
@@ -8,6 +8,12 @@ import { motion, useInView } from "framer-motion";
 const Learnings = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [toggledLearning, setToggledLearning] = useState(null);
+
+  const handleToggle = (id) => {
+    const selected = learnings.find((item) => item.id === id);
+    setToggledLearning(selected);
+  };
 
   return (
     <section
@@ -18,7 +24,9 @@ const Learnings = () => {
         <SectionText text="LEARNINGS" />
       </h2>
 
-      <div className="flex font-bitcount justify-evenly relative py-72 px-24 flex items-center gap-8">
+      <div
+        className={`flex font-bitcount justify-evenly relative py-72 px-24 flex items-center gap-8`}
+      >
         {learnings?.map((learning, index) => {
           let dynamicColor;
 
@@ -36,6 +44,8 @@ const Learnings = () => {
               dynamicColor = "#B39DDB";
               break;
           }
+
+          const isActive = toggledLearning?.id === learning.id;
           return (
             <div key={learning.id} className="relative inline-block group ">
               <motion.div
@@ -44,22 +54,26 @@ const Learnings = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{
                   duration: 0.6,
-                  delay: index % 2 === 0 ? 0.1 : 0.2,
+                  delay: index % 2 === 0 ? 0.5 : 0.4,
                   ease: "easeOut",
                 }}
-                className=" relative text-wrap "
+                className=" relative text-wrap"
               >
                 <div
-                  className={`absolute inset-0 bg-black z-0 transition-all duration-200 translate-2 group-hover:translate-3`}
+                  className={`absolute inset-0 bg-black z-0 transition-all duration-200 translate-2 group-hover:translate-3 
+                    ${isActive ? "translate-3 w-full" : ""}`}
                 />
-
                 <Card
-                  className={`group-hover:-translate-3  gap-3`}
+                  className={`group-hover:-translate-3 gap-3 hover:cursor-pointer 
+                    ${isActive ? "-translate-3" : ""}`}
                   style={{ background: dynamicColor }}
+                  onClick={() => handleToggle(learning.id)}
                 >
                   <img src={learning?.thumbnail} alt={learning?.name} />
                   <p
-                    className={`w-auto absolute text-3xl text-center text-wrap mt-12 font-extrabold group-hover:text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)]`}
+                    className={`w-auto absolute text-3xl text-center text-wrap mt-12 
+                      font-extrabold group-hover:text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)] 
+                      ${isActive ? "text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)]" : ""}`}
                     style={{ color: dynamicColor }}
                   >
                     {learning?.name}
