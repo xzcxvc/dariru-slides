@@ -100,16 +100,15 @@ const Learnings = () => {
                             </div>
                           </div>
                         )}
-
-                        <p
-                          className={`w-auto absolute text-3xl text-center text-wrap mt-12 
-                            font-extrabold group-hover:text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)] 
-                            ${toggledLearning ? "text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)]" : ""}`}
-                          style={{ color: dynamicColor }}
-                        >
-                          {learning?.name}
-                        </p>
                       </div>
+                      <p
+                        className={`w-auto absolute text-[2rem] text-start text-wrap mt-8 
+                      font-extrabold group-hover:text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)] 
+                      ${toggledLearning ? "text-shadow-[3px_3px_0px_rgba(0,0,0,0.8)]" : ""}`}
+                        style={{ color: dynamicColor }}
+                      >
+                        {learning?.name}
+                      </p>
                     </Card>
                   </motion.div>
                 </motion.div>
