@@ -4,6 +4,7 @@ import Card from "../components/card";
 import { learnings } from "../constants";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { Triangle } from "lucide-react";
 
 const Learnings = () => {
   const ref = useRef(null);
@@ -69,7 +70,7 @@ const Learnings = () => {
                       style={{ background: dynamicColor }}
                       onClick={() => handleToggle(learning.id)}
                     >
-                      <div className="flex relative gap-12">
+                      <div className="flex relative gap-8">
                         <img
                           src={learning?.thumbnail}
                           alt={learning?.name}
@@ -77,15 +78,26 @@ const Learnings = () => {
                         />
                         {toggledLearning && (
                           <div className="w-full">
-                            <ul
-                              className={`flex gap-4 flex-col min-h-full justify-center text-2xl font-bold font-pressstart`}
+                            <div
+                              className={`pr-12 flex gap-4 flex-col min-h-full justify-center text-xl font-bold font-pressstart`}
                             >
-                              {learning?.items?.map((item) => (
-                                <li key={item.id}>
-                                  <p>{item.item}</p>
-                                </li>
+                              {learning?.topics?.map((topic) => (
+                                <div
+                                  key={topic.id}
+                                  className="flex justify-start items-center w-full gap-12"
+                                >
+                                  <p className="w-3/12 text-nowrap">
+                                    {topic.name}
+                                  </p>
+                                  <div>
+                                    <Triangle className="w-6 h-6 fill-black rotate-90 text-black" />
+                                  </div>
+                                  <p className={`font-sharetech w-8/12`}>
+                                    {topic.context}
+                                  </p>
+                                </div>
                               ))}
-                            </ul>
+                            </div>
                           </div>
                         )}
                       </div>

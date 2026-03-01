@@ -71,18 +71,21 @@ export const learnings = [
     id: 1,
     name: "New Tech Stack",
     thumbnail: TechStach,
-    items: [
+    topics: [
       {
         id: 1,
-        item: "React JS",
+        name: "React JS",
+        context: "Builds fast, interactive user interfaces.",
       },
       {
         id: 2,
-        item: "Typescript",
+        name: "TypeScript",
+        context: "Adds type safety and better scalability.",
       },
       {
         id: 3,
-        item: "Tailwind CSS",
+        name: "TailwindCSS",
+        context: "Enables rapid, responsive UI styling.",
       },
     ],
   },
@@ -90,26 +93,31 @@ export const learnings = [
     id: 2,
     name: "Atomic Design",
     thumbnail: AtomicDesign,
-    items: [
+    topics: [
       {
         id: 1,
-        item: "Atoms",
+        name: "Atoms",
+        context: "Basic UI elements like buttons, inputs, and labels.",
       },
       {
         id: 2,
-        item: "Molecules",
+        name: "Molecules",
+        context: "Small groups of atoms forming simple components.",
       },
       {
         id: 3,
-        item: "Organisms",
+        name: "Organisms",
+        context: "Complex sections composed of multiple molecules.",
       },
       {
         id: 4,
-        item: "Templates",
+        name: "Templates",
+        context: "Page layouts arranging organisms into structure.",
       },
       {
         id: 5,
-        item: "Pages",
+        name: "Pages",
+        context: "Complete screens with real content and data.",
       },
     ],
   },
