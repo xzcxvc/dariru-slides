@@ -34,7 +34,7 @@ const Welcome = () => {
         <SectionText text="WELCOME!" />
       </h2>
 
-      <div className="flex justify-evenly relative flex items-center gap-2 top-18 text-nowrap m-24">
+      <div className="flex justify-evenly relative flex items-center gap-4 top-18 text-nowrap m-24">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, x: 200 }}
