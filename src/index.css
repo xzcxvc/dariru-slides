@@ -81,9 +81,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Define custom cursor tokens */
-  --cursor-retro: url("/path-to-retro-cursor.png"), auto;
-  --cursor-retro-pointer: url("/path-to-retro-hand.png"), pointer;
 }
 
 :root {
