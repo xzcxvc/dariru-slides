@@ -216,3 +216,11 @@
   display: inline-block;
   animation: jumble 1s ease-in-out infinite alternate;
 }
+
+@layer base {
+  body {
+    cursor:
+      url("/cursor.png") 0 0,
+      auto;
+  }
+}

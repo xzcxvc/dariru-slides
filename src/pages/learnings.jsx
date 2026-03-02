@@ -50,7 +50,7 @@ const Learnings = () => {
             }
 
             return (
-              <div key={learning.id} className="relative inline-block group ">
+              <div key={learning.id} className="relative inline-block group bg-gradient">
                 <motion.div
                   ref={ref}
                   initial={{ opacity: 0, y: index % 2 === 0 ? 200 : -200 }}
@@ -65,7 +65,7 @@ const Learnings = () => {
                   <motion.div>
                     <Card
                       isActive={toggledLearning}
-                      className={`${toggledLearning === learning?.id ? "w-350" : ""} w-80 h-80 
+                      className={`${toggledLearning === learning?.id ? "w-350" : ""} w-80 h-80
                     ${toggledLearning ? "-translate-3" : ""}`}
                       style={{ background: dynamicColor }}
                       onClick={() => handleToggle(learning.id)}
@@ -90,7 +90,7 @@ const Learnings = () => {
                                     {topic.name}
                                   </p>
                                   <div>
-                                    <Triangle className="w-6 h-6 fill-black rotate-90 text-black" />
+                                    <Triangle className="w-3 h-3 fill-black rotate-90 text-black" />
                                   </div>
                                   <p className={`font-sharetech w-8/12`}>
                                     {topic.context}

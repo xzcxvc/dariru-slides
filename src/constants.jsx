@@ -52,7 +52,7 @@ export const welcomeWords = [
 export const niceToHaves = [
   {
     id: 1,
-    name: "Implementation of Atomic Design",
+    name: "Atomic Design Implementation",
     description:
       "<Adopting Atomic Design principles for better component organization and scalability./>",
     icon: Atom,
@@ -69,7 +69,7 @@ export const niceToHaves = [
 export const learnings = [
   {
     id: 1,
-    name: "New Tech Stack",
+    name: "New Technology Stack",
     thumbnail: TechStach,
     topics: [
       {
@@ -91,7 +91,7 @@ export const learnings = [
   },
   {
     id: 2,
-    name: "Atomic Design",
+    name: "Atomic Design Pattern",
     thumbnail: AtomicDesign,
     topics: [
       {
@@ -125,10 +125,16 @@ export const learnings = [
     id: 3,
     name: "Custom Component Documentation",
     thumbnail: Documentation,
-    items: [
+    topics: [
       {
         id: 1,
-        item: "",
+        name: "Architecture",
+        context: "Structure, props design, and reusability patterns.",
+      },
+      {
+        id: 2,
+        name: "Usage",
+        context: "Practical implementation samples and integration guides.",
       },
     ],
   },
@@ -136,11 +142,28 @@ export const learnings = [
     id: 4,
     name: "Embracing the AI Era",
     thumbnail: AiEra,
-    items: [
+    topics: [
       {
         id: 1,
-        item: "",
+        name: "Prompting",
+        context: "Writing effective prompts for better AI outputs.",
+      },
+      {
+        id: 2,
+        name: "AI + Human",
+        context: "Balancing automation with critical thinking.",
+      },
+      {
+        id: 3,
+        name: "Upskill",
+        context: "Adapting to AI-driven industry transformation.",
       },
     ],
   },
+];
+
+export const realizations = [
+  { id: 1, name: '"The only constant thing in this world is change."' },
+  { id: 2, name: '"Continuous learning is continuous progress."' },
+  { id: 3, name: '"Artifical Intelligence is inevitable."' },
 ];

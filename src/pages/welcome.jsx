@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import SectionText from "../components/section-text";
 import { motion, useInView } from "framer-motion";
-import WelcomeImg from "/welcomeImg.png";
+import WelcomeImg from "/welcomeImg2.png";
 import ClickSpark from "../components/click-spark";
 import { welcomeWords } from "../constants";
 import "../index.css";
@@ -34,13 +34,13 @@ const Welcome = () => {
         <SectionText text="WELCOME!" />
       </h2>
 
-      <div className="flex justify-evenly relative p-20 flex items-center gap-12">
+      <div className="flex justify-evenly relative flex items-center gap-2 top-18 text-nowrap m-24">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, x: 200 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          className="font-sharetech relative text-wrap w-7/12 text-[3rem] font-bold "
+          className="font-sharetech relative text-wrap w-7/12 text-[3rem] font-bold"
         >
           {welcomeWords?.map((w) => {
             if (w.type === "normal") return <span> {w.word} </span>;
@@ -89,11 +89,11 @@ const Welcome = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
         >
-          <div className="h-[600px] w-[600px] border-[5px] border-black shadow-[15px_15px_0px_rgba(0,0,0,0.8)]">
+          <div className=" w-[800px] h-[600px] border-[5px] border-black shadow-[15px_15px_0px_rgba(0,0,0,1)]">
             <img
               src={WelcomeImg}
               alt="Welcome Image"
-              className="w-[600px] h-[600px] object-cover"
+              className="h-full object-fill"
             />
           </div>
         </motion.div>

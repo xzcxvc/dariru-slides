@@ -8,7 +8,7 @@ const Button = ({ onClick, className, children }) => {
         hover:border-1 
         hover:border-black 
         hover:text-white 
-        hover:cursor-pointer hover:-translate-1`}
+        hover:cursor-[url('/cursor-pointer.png')_16_16,_pointer] hover:-translate-1`}
     >
       {children}
     </button>
