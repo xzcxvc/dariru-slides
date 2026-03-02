@@ -33,19 +33,25 @@ const Learnings = () => {
           )
           .map((learning, index) => {
             let dynamicColor;
+            let dynamicGradient;
 
             switch (learning?.id) {
               case 1:
-                dynamicColor = "linear-gradient(to bottom, #FF6F61, #FFA07A)";
+                dynamicColor = "#FF6F61";
+                dynamicGradient =
+                  "linear-gradient(to bottom, #FF6F61, #FFA07A)";
                 break;
               case 2:
-                dynamicColor = "linear-gradient(to right, #B8E986, #7ED957)";
+                dynamicColor = "#B8E986";
+                dynamicGradient = "linear-gradient(to right, #B8E986, #7ED957)";
                 break;
               case 3:
-                dynamicColor = "linear-gradient(to right, #F7A8B8, #FDC2D1)";
+                dynamicColor = "#F7A8B8";
+                dynamicGradient = "linear-gradient(to right, #F7A8B8, #FDC2D1)";
                 break;
               case 4:
-                dynamicColor = "linear-gradient(to right, #B39DDB, #9575CD)";
+                dynamicColor = "#B39DDB";
+                dynamicGradient = "linear-gradient(to right, #B39DDB, #9575CD)";
                 break;
             }
 
@@ -70,7 +76,7 @@ const Learnings = () => {
                       isActive={toggledLearning}
                       className={`${toggledLearning === learning?.id ? "w-350" : ""} w-80 h-80
                     ${toggledLearning ? "-translate-3" : ""}`}
-                      style={{ background: dynamicColor }}
+                      style={{ background: dynamicGradient }}
                       onClick={() => handleToggle(learning.id)}
                     >
                       <div className="flex relative gap-8">

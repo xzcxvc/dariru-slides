@@ -28,7 +28,7 @@ const Sidebar = () => {
                       className="h-18 w-18 hover:bg-[#01C29F] bg-[#FFF8E7] transition-all 
                        text-[#212435] "
                     >
-                      <Icon />
+                      <Icon className="w-8 h-8" />
                     </Button>
                   </div>
                 );

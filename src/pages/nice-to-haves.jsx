@@ -28,19 +28,24 @@ const NiceToHaves = () => {
       >
         {niceToHaves.map((niceToHave, index) => {
           let dynamicColor;
+          let dynamicGradient;
 
           switch (niceToHave?.id) {
             case 1:
               dynamicColor = "#FF6F61";
+              dynamicGradient = "linear-gradient(to bottom, #FF6F61, #FFA07A)";
               break;
             case 2:
-              dynamicColor = "#B8E986";
+              dynamicColor = "#F7A8B8";
+              dynamicGradient = "linear-gradient(to right, #52d1ff, #8c65f0)";
               break;
             case 3:
-              dynamicColor = "#F7A8B8";
+              dynamicColor = "#B8E986";
+              dynamicGradient = "linear-gradient(to right, #B8E986, #7ED957)";
               break;
             case 4:
               dynamicColor = "#B39DDB";
+              dynamicGradient = "linear-gradient(to right, #B39DDB, #9575CD)";
               break;
           }
           const Icon = niceToHave?.icon;
@@ -61,7 +66,7 @@ const NiceToHaves = () => {
                   <Card
                     isActive={toggledNiceToHave === niceToHave?.id}
                     className={` ${toggledNiceToHave === niceToHave?.id ? "h-70" : ""} w-350 h-36 `}
-                    style={{ background: dynamicColor }}
+                    style={{ background: dynamicGradient }}
                     onClick={() => handleToggle(niceToHave.id)}
                   >
                     <div className="flex flex-col gap-3">
