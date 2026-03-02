@@ -36,21 +36,24 @@ const Learnings = () => {
 
             switch (learning?.id) {
               case 1:
-                dynamicColor = "#FF6F61";
+                dynamicColor = "linear-gradient(to bottom, #FF6F61, #FFA07A)";
                 break;
               case 2:
-                dynamicColor = "#B8E986";
+                dynamicColor = "linear-gradient(to right, #B8E986, #7ED957)";
                 break;
               case 3:
-                dynamicColor = "#F7A8B8";
+                dynamicColor = "linear-gradient(to right, #F7A8B8, #FDC2D1)";
                 break;
               case 4:
-                dynamicColor = "#B39DDB";
+                dynamicColor = "linear-gradient(to right, #B39DDB, #9575CD)";
                 break;
             }
 
             return (
-              <div key={learning.id} className="relative inline-block group bg-gradient">
+              <div
+                key={learning.id}
+                className="relative inline-block group bg-gradient"
+              >
                 <motion.div
                   ref={ref}
                   initial={{ opacity: 0, y: index % 2 === 0 ? 200 : -200 }}

@@ -163,7 +163,7 @@ export const learnings = [
 ];
 
 export const realizations = [
-  { id: 1, name: '"The only constant thing in this world is change."' },
-  { id: 2, name: '"Continuous learning is continuous progress."' },
   { id: 3, name: '"Artifical Intelligence is inevitable."' },
+  { id: 2, name: '"Continuous learning is continuous progress."' },
+  { id: 1, name: '"The only constant thing in this world is change."' },
 ];
