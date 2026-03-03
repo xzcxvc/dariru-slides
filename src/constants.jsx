@@ -4,8 +4,8 @@ import {
   Sparkles,
   Lightbulb,
   Atom,
-  Bookmark,
   Book,
+  PartyPopper
 } from "lucide-react";
 import AiEra from "/aiera.png";
 import AtomicDesign from "/atomicdesign.png";
@@ -36,6 +36,12 @@ export const navItems = [
     name: "Realizations",
     href: "#realizations",
     icon: Lightbulb,
+  },
+  {
+    id: 5,
+    name: "Thank You!",
+    href: "#thank-you",
+    icon: PartyPopper,
   },
 ];
 

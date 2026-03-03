@@ -3,6 +3,7 @@ import Welcome from "./pages/welcome";
 import Learnings from "./pages/learnings";
 import NiceToHaves from "./pages/nice-to-haves";
 import Realizations from "./pages/realizations";
+import ThankYou from "./pages/thank-you";
 import GridBackground from "./components/grid-background";
 import Sidebar from "./components/sidebar";
 import ClickSpark from "./components/click-spark";
@@ -25,6 +26,7 @@ function App() {
               <Learnings />
               <NiceToHaves />
               <Realizations />
+              <ThankYou />
             </section>
           </main>
         </ClickSpark>
